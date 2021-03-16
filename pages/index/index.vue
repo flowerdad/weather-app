@@ -3,7 +3,7 @@
 		<image src="/static/bj.jpg" mode="widthFix" class="response"></image>
 		<scroll-view scroll-y class="page">
 			<view class="cu-card case">
-				<view class="cu-item shadow">
+				<view class="cu-item shadow" style="margin-bottom: 0rpx;">
 					<view class="cu-bar">
 						<view class="action">
 							<text class="cuIcon-title text-orange "></text> 高空观测
@@ -19,7 +19,7 @@
 			</view>
 			
 			<view class="cu-card case">
-				<view class="cu-item shadow">
+				<view class="cu-item shadow" style="margin-bottom: 0rpx;">
 					<view class="cu-bar bg-white">
 						<view class="action">
 							<text class="cuIcon-title text-orange "></text> 地面观测
@@ -35,7 +35,7 @@
 			</view>
 			
 			<view class="cu-card case">
-				<view class="cu-item shadow">
+				<view class="cu-item shadow" style="margin-bottom: 0rpx;">
 					<view class="cu-bar bg-white">
 						<view class="action">
 							<text class="cuIcon-title text-orange "></text> 睿图产品
@@ -51,7 +51,7 @@
 			</view>
 			
 			<view class="cu-card case">
-				<view class="cu-item shadow">
+				<view class="cu-item shadow" style="margin-bottom: 0rpx;">
 					<view class="cu-bar bg-white">
 						<view class="action">
 							<text class="cuIcon-title text-orange "></text> 预报产品
@@ -69,7 +69,7 @@
 			</view>
 			
 			<view class="cu-card case">
-				<view class="cu-item shadow">
+				<view class="cu-item shadow" style="margin-bottom: 0rpx;">
 					<view class="cu-bar bg-white">
 						<view class="action">
 							<text class="cuIcon-title text-orange "></text> 服务产品
@@ -131,34 +131,34 @@
 				],
 				groundObservation: [
 					{
-						cuIcon: 'iconleida',
+						cuIcon: 'iconshikuang',
 						color: 'red',
 						name: '天气实况'
 					}, {
-						cuIcon: 'icontankong',
+						cuIcon: 'iconturang',
 						color: 'orange',
 						name: '土壤'
 					}, {
-						cuIcon: 'iconshandian',
+						cuIcon: 'icondaomianzhan',
 						color: 'yellow',
 						name: '道面站'
 					}, {
-						cuIcon: 'iconyuntu',
+						cuIcon: 'iconhuanjing',
 						color: 'olive',
 						name: '环境'
 					}
 				],
 				ruituProducts: [
 					{
-						cuIcon: 'iconleida',
+						cuIcon: 'iconin',
 						color: 'red',
 						name: 'RMAPS-IN'
 					}, {
-						cuIcon: 'icontankong',
+						cuIcon: 'iconin',
 						color: 'orange',
 						name: 'RMAPS-NOW'
 					}, {
-						cuIcon: 'iconshandian',
+						cuIcon: 'iconin',
 						color: 'yellow',
 						name: 'RMAPS-ST-3H'
 					}
@@ -166,19 +166,19 @@
 				
 				forecastProducts: [
 					{
-						cuIcon: 'iconleida',
+						cuIcon: 'iconbaogao',
 						color: 'red',
 						name: '天气公报'
 					}, {
-						cuIcon: 'icontankong',
+						cuIcon: 'iconzhoubian',
 						color: 'orange',
 						name: '周边天气预报'
 					}, {
-						cuIcon: 'iconshandian',
+						cuIcon: 'iconshijian',
 						color: 'yellow',
 						name: '未来240h小时预报'
 					}, {
-						cuIcon: 'iconyuntu',
+						cuIcon: 'iconshijian',
 						color: 'yellow',
 						name: '未来12h小时预报'
 					}
@@ -186,19 +186,19 @@
 				
 				serviceProducts: [
 					{
-						cuIcon: 'iconleida',
+						cuIcon: 'iconbaogao',
 						color: 'red',
 						name: '天气情况'
 					}, {
-						cuIcon: 'icontankong',
+						cuIcon: 'iconbaogao',
 						color: 'orange',
 						name: '天气快报'
 					}, {
-						cuIcon: 'iconshandian',
+						cuIcon: 'iconbaogao',
 						color: 'yellow',
 						name: '重要天气报告'
 					}, {
-						cuIcon: 'iconyuntu',
+						cuIcon: 'iconzhoubian',
 						color: 'yellow',
 						name: '雨（雪）量实况表DOC'
 					}
@@ -206,11 +206,11 @@
 				
 				globalValue: [
 					{
-						cuIcon: 'iconleida',
+						cuIcon: 'iconin',
 						color: 'red',
 						name: 'EC_thin'
 					}, {
-						cuIcon: 'icontankong',
+						cuIcon: 'iconin',
 						color: 'orange',
 						name: 'Grapes预报'
 					}
@@ -221,7 +221,7 @@
 </script>
 
 <style>
-	/* .page {
-		height: 100vh;
-	} */
+	.page {
+		/* height: calc(100vh - 280px); */
+	}
 </style>
