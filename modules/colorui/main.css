@@ -1484,7 +1484,7 @@ button.cuIcon.lg {
 	display: flex;
 	position: relative;
 	align-items: center;
-	min-height: 100upx;
+	min-height: 80upx;
 	justify-content: space-between;
 }
 

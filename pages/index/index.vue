@@ -1,9 +1,108 @@
-<template>
-	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
-		</view>
+<template name="components">
+	<view>
+		<image src="/static/bj.jpg" mode="widthFix" class="response"></image>
+		<scroll-view scroll-y class="page">
+			<view class="cu-card case">
+				<view class="cu-item shadow">
+					<view class="cu-bar">
+						<view class="action">
+							<text class="cuIcon-title text-orange "></text> 高空观测
+						</view>
+					</view>
+					<view class="cu-list grid col-4 no-border">
+						<view class="cu-item" v-for="(item,index) in highObservation" :key="index">
+							<view class="iconfont cuIcon-cuIcon" :class="[item.cuIcon,'text-' + item.color]"></view>
+							<text>{{item.name}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			
+			<view class="cu-card case">
+				<view class="cu-item shadow">
+					<view class="cu-bar bg-white">
+						<view class="action">
+							<text class="cuIcon-title text-orange "></text> 地面观测
+						</view>
+					</view>
+					<view class="cu-list grid col-4 no-border">
+						<view class="cu-item" v-for="(item,index) in groundObservation" :key="index">
+							<view class="iconfont cuIcon-cuIcon" :class="[item.cuIcon,'text-' + item.color]"></view>
+							<text>{{item.name}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			
+			<view class="cu-card case">
+				<view class="cu-item shadow">
+					<view class="cu-bar bg-white">
+						<view class="action">
+							<text class="cuIcon-title text-orange "></text> 睿图产品
+						</view>
+					</view>
+					<view class="cu-list grid col-3 no-border">
+						<view class="cu-item" v-for="(item,index) in ruituProducts" :key="index">
+							<view class="iconfont cuIcon-cuIcon" :class="[item.cuIcon,'text-' + item.color]"></view>
+							<text>{{item.name}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			
+			<view class="cu-card case">
+				<view class="cu-item shadow">
+					<view class="cu-bar bg-white">
+						<view class="action">
+							<text class="cuIcon-title text-orange "></text> 预报产品
+						</view>
+					</view>
+					<view class="cu-list menu sm-border">
+						<view class="cu-item" v-for="(item,index) in forecastProducts" :key="index">
+							<navigator class="content" hover-class="none" :url="item.url" open-type="redirect">
+								<text class="iconfont cuIcon-cuIcon" :class="[item.cuIcon,'text-' + item.color]"></text>
+								<text class="text-grey">{{item.name}}</text>
+							</navigator>
+						</view>
+					</view>
+				</view>
+			</view>
+			
+			<view class="cu-card case">
+				<view class="cu-item shadow">
+					<view class="cu-bar bg-white">
+						<view class="action">
+							<text class="cuIcon-title text-orange "></text> 服务产品
+						</view>
+					</view>
+					<view class="cu-list menu sm-border">
+						<view class="cu-item" v-for="(item,index) in serviceProducts" :key="index">
+							<navigator class="content" hover-class="none" :url="item.url" open-type="redirect">
+								<text class="iconfont cuIcon-cuIcon" :class="[item.cuIcon,'text-' + item.color]"></text>
+								<text class="text-grey">{{item.name}}</text>
+							</navigator>
+						</view>
+					</view>
+				</view>
+			</view>
+			
+			<view class="cu-card case">
+				<view class="cu-item shadow">
+					<view class="cu-bar bg-white">
+						<view class="action">
+							<text class="cuIcon-title text-orange "></text> 全球数值
+						</view>
+					</view>
+					<view class="cu-list grid col-2 no-border">
+						<view class="cu-item" v-for="(item,index) in globalValue" :key="index">
+							<view class="iconfont cuIcon-cuIcon" :class="[item.cuIcon,'text-' + item.color]"></view>
+							<text>{{item.name}}</text>
+						</view>
+					</view>
+				</view>
+			</view>
+			
+		</scroll-view>
 	</view>
 </template>
 
@@ -11,42 +110,118 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
-			}
-		},
-		onLoad() {
-
-		},
-		methods: {
-
+				highObservation: [
+					{
+						cuIcon: 'iconleida',
+						color: 'red',
+						name: '雷达回波'
+					}, {
+						cuIcon: 'icontankong',
+						color: 'orange',
+						name: '探空'
+					}, {
+						cuIcon: 'iconshandian',
+						color: 'yellow',
+						name: '闪电'
+					}, {
+						cuIcon: 'iconyuntu',
+						color: 'olive',
+						name: '云图'
+					}
+				],
+				groundObservation: [
+					{
+						cuIcon: 'iconleida',
+						color: 'red',
+						name: '天气实况'
+					}, {
+						cuIcon: 'icontankong',
+						color: 'orange',
+						name: '土壤'
+					}, {
+						cuIcon: 'iconshandian',
+						color: 'yellow',
+						name: '道面站'
+					}, {
+						cuIcon: 'iconyuntu',
+						color: 'olive',
+						name: '环境'
+					}
+				],
+				ruituProducts: [
+					{
+						cuIcon: 'iconleida',
+						color: 'red',
+						name: 'RMAPS-IN'
+					}, {
+						cuIcon: 'icontankong',
+						color: 'orange',
+						name: 'RMAPS-NOW'
+					}, {
+						cuIcon: 'iconshandian',
+						color: 'yellow',
+						name: 'RMAPS-ST-3H'
+					}
+				],
+				
+				forecastProducts: [
+					{
+						cuIcon: 'iconleida',
+						color: 'red',
+						name: '天气公报'
+					}, {
+						cuIcon: 'icontankong',
+						color: 'orange',
+						name: '周边天气预报'
+					}, {
+						cuIcon: 'iconshandian',
+						color: 'yellow',
+						name: '未来240h小时预报'
+					}, {
+						cuIcon: 'iconyuntu',
+						color: 'yellow',
+						name: '未来12h小时预报'
+					}
+				],
+				
+				serviceProducts: [
+					{
+						cuIcon: 'iconleida',
+						color: 'red',
+						name: '天气情况'
+					}, {
+						cuIcon: 'icontankong',
+						color: 'orange',
+						name: '天气快报'
+					}, {
+						cuIcon: 'iconshandian',
+						color: 'yellow',
+						name: '重要天气报告'
+					}, {
+						cuIcon: 'iconyuntu',
+						color: 'yellow',
+						name: '雨（雪）量实况表DOC'
+					}
+				],
+				
+				globalValue: [
+					{
+						cuIcon: 'iconleida',
+						color: 'red',
+						name: 'EC_thin'
+					}, {
+						cuIcon: 'icontankong',
+						color: 'orange',
+						name: 'Grapes预报'
+					}
+				],
+			};
 		}
 	}
 </script>
 
 <style>
-	.content {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: center;
-	}
-
-	.logo {
-		height: 200rpx;
-		width: 200rpx;
-		margin-top: 200rpx;
-		margin-left: auto;
-		margin-right: auto;
-		margin-bottom: 50rpx;
-	}
-
-	.text-area {
-		display: flex;
-		justify-content: center;
-	}
-
-	.title {
-		font-size: 36rpx;
-		color: #8f8f94;
-	}
+	/* .page {
+		height: 100vh;
+	} */
 </style>
