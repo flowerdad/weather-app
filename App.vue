@@ -38,4 +38,5 @@
     @import "modules/colorui/main.css";
     @import "modules/colorui/icon.css";
 	@import "static/iconfont.css";
+	@import "common/uni.css";
 </style>

@@ -27,8 +27,10 @@
 					</view>
 					<view class="cu-list grid col-4 no-border">
 						<view class="cu-item" v-for="(item,index) in groundObservation" :key="index">
-							<view class="iconfont cuIcon-cuIcon" :class="[item.cuIcon,'text-' + item.color]"></view>
-							<text>{{item.name}}</text>
+							<navigator class="content" hover-class="none" :url="item.url" navigateTo>
+								<view class="iconfont cuIcon-cuIcon" :class="[item.cuIcon,'text-' + item.color]"></view>
+								<text>{{item.name}}</text>
+							</navigator>
 						</view>
 					</view>
 				</view>
@@ -133,19 +135,23 @@
 					{
 						cuIcon: 'iconshikuang',
 						color: 'red',
-						name: '天气实况'
+						name: '天气实况',
+						url:'/pages/groundObservation/weatherSituation/index'
 					}, {
 						cuIcon: 'iconturang',
 						color: 'orange',
-						name: '土壤'
+						name: '土壤',
+						url:'/pages/groundObservation/weatherSituation/index'
 					}, {
 						cuIcon: 'icondaomianzhan',
 						color: 'yellow',
-						name: '道面站'
+						name: '道面站',
+						url:'/pages/groundObservation/weatherSituation/index'
 					}, {
 						cuIcon: 'iconhuanjing',
 						color: 'olive',
-						name: '环境'
+						name: '环境',
+						url:'/pages/groundObservation/weatherSituation/index'
 					}
 				],
 				ruituProducts: [
